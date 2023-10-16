@@ -1,0 +1,29 @@
+const express=require("express");
+const cors = require("cors")
+
+const app = express();
+app.use(cors());
+
+app.get("/",(req,res)=>{
+    res.send("State And City Names");
+})
+
+app.get("/mh",(req,res)=>{
+    res.send(["Pune","Latur","Mumbai","Nanded","Aurangabad","Ahmedabad","Sangli","Nanded"]);
+})
+
+app.get("/telng",(req,res)=>{
+    res.send(["Hyderabad","Nirmal","Medak","BhupalPalli","Jahinabad","Adilabad","Zahirabad","Nizamabad","Vikarabad"])
+})
+
+app.get("/andhra",(req,res)=>{
+    res.send(["Vijaywada","Vishakhapattanam","Kakinada","Kurnool"]);
+})
+
+app.get("/punj",(req,res)=>{
+    res.send(["Amritsar","Patiyala","Kapurthala","Gurdaspur","Hoshiyarpur"])
+})
+
+app.listen(5020,()=>{
+    console.log("Port 5020 is running ");
+})
